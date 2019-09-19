@@ -4,4 +4,13 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import "./src/styles/index.scss"
+
+// exports.onInitialClientRender = () => {
+//   console.log("ReactDOM.render has executed")
+// }
+
+// exports.onRouteUpdate = ({ location, prevLocation }) => {
+//   console.log('new pathname', location.pathname)
+//   console.log('old pathname', prevLocation ? prevLocation.pathname : null)
+// }

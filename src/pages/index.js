@@ -1,21 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Display from "../components/display"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query SiteAuthorQuery {
+      site {
+        siteMetadata {
+          authorName,
+          authorProfession
+        }
+      }
+    }
+  `)
+  const { site } = data
+  const { siteMetadata } = site
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Display {...siteMetadata} />
+      <section id="anchore" class="flex flex-col justify-center">
+        <div class="text-center">
+          <em>Come back later.... right now there's nothing to see!</em>
+        </div>
+      </section>
+    </Layout>
+  )
+}
 
 export default IndexPage

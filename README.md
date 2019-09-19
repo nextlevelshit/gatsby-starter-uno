@@ -81,3 +81,19 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## Authors
+
+Photo by Alexander Schimmeck on Unsplash
+Photo by Parker Whitson on Unsplash https://unsplash.com/photos/HSFEeS-Jvxw
+Photo by Felipe Bustillo on Unsplash https://unsplash.com/photos/YXDTQ4e5wDo
+Photo by Mohammed Hassan on Unsplash https://unsplash.com/photos/Vg1o2mipcJc
+Photo by Houcine Ncib on Unsplash https://unsplash.com/photos/6hUa_5hiDxw
+Photo by christopher lemercier on Unsplash https://unsplash.com/photos/0adw8Y-3OGA
+Photo by Aditya Ali on Unsplash https://unsplash.com/photos/HGpfvykcI5U
+Photo by Sunyu Kim on Unsplash https://unsplash.com/photos/muvYcFC8UWA
+Photo by Oswaldo Ibáñez on Unsplash https://unsplash.com/photos/lVmJ7cxIMFA
+Photo by Parker Whitson on Unsplash https://unsplash.com/photos/CUADwVXAlkk
+Photo by Caique Silva on Unsplash https://unsplash.com/photos/Jn9uPCJX2Ks
+Photo by Emile Mbunzama on Unsplash https://unsplash.com/photos/kqSazaTGriE
+Photo by Brian on Unsplash https://unsplash.com/photos/nVu_pNoZYxg
