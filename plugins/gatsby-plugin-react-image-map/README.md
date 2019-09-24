@@ -1,4 +1,4 @@
-## Description
+## gatsby-plugin-react-image-map
 
 This Plugin is creating a multi-layered component with background images.
 The images are in full width and cover the whole wrapper element.
@@ -6,7 +6,7 @@ It's showen one image at a time.
 While moving the mouse in any direction the images are beeing iterated and exchanged.
 On touch devices only the x-axis is beeing tracked for iterating the images.
 
-Open example of [`gatsby-plugin-image-map`](https://paulastoll.de)
+<!-- Open example of [`gatsby-plugin-image-map`](https://paulastoll.de) -->
 
 ### Dependencies
 
@@ -16,11 +16,11 @@ To use this plugin correctly you should have installed `gatsby-transformer-sharp
    ```shell
    yarn add gatsby-transformer-sharp
    # or
-   npm i gatsby-transformer-sharp --save-dev
+   npm install --save gatsby-transformer-sharp
    ```
 
 2. Configure `gatsby-config.js`
-  ```js
+  ```javascript
   module.exports = {
     plugins: [
       `gatsby-transformer-sharp`,
@@ -34,7 +34,7 @@ To use this plugin correctly you should have installed `gatsby-transformer-sharp
 
 If there are other tutorials, docs, and learning resources that are necessary or helpful to someone using this plugin, please link to those here. -->
 
-## How to install
+## Install
 
 1. Install `gatsby-plugin-image-map`
    ```shell
@@ -44,7 +44,7 @@ If there are other tutorials, docs, and learning resources that are necessary or
    ```
 
 2. Configure `gatsby-config.js`
-  ```js
+  ```javascript
   module.exports = {
     plugins: [
       `gatsby-plugin-image-map`,
@@ -61,12 +61,30 @@ These are the default options and can/should be modified.
 `nodes` is the only required property.
 All the rest is optional.
 
-```js
-nodes:        [],          // list of your images
-activeClass:  `--active`,  // (optional) class of an active element
-itemClass:    ``,          // (optional) wrapper class of images
-threshold:    100          // (optional) the bigger the threshold, the longer
-                           // the mouse movement has to be to change an image
+```javascript
+activeClass: ``,          // (optional) class of an active image wrapper
+activeStyle: {            // (optional) active styles for active image wrapper
+  opacity: 1,
+},
+imageStyle: {             // (optional) custom styles for image element
+  maxWidth: `100%`,
+  maxHeight: `100vh`,
+},
+itemClass: ``,            // (optional) class of an active image wrapper
+itemStyle: {              // (optional) custom styles for image wrapper
+  position: `absolute`,
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  display: `block`,
+  opacity: 0,
+  width: `100%`,
+  height: `100%`,
+},
+nodes: [],                // list of your images
+threshold: 100            // (optional) the bigger the threshold, the longer
+                          // the mouse movement has to be to change an image
 ```
 
 ## When do I use this plugin?
@@ -77,13 +95,44 @@ It is a kind of interactice slide show.
 
 ## Examples of usage
 
-This usually shows a code example showing how to include this plugin in a site's `config.js` file.
+```javascript
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import ImageMap from "gatsby-plugin-react-image-map" // import the image-map plugin
 
-    code example
+const ImageMapContainer = () => {
+  /**
+   * Query the images you'd like to be visible inside the image map.
+   * In this case the regular expression is looking for images inside
+   * the `image-map` folder inside your `src`
+   */
+  const data = useStaticQuery(graphql`
+    query ImageMapQuery {
+      allFile(filter: {relativePath: {regex: "/image-map/"}}) {
+        nodes {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+          relativePath
+        }
+      }
+    }
+  `)
+   
+  return (
+    <ImageMap nodes={data.allFile.nodes}/>
+  )
+}
 
-//See this [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code) on how to format code examples.
+export default ImageMapContainer
+```
 
-This section could also include before-and-after examples of data when the plugin is enabled, if applicable.
+## Examples
+
+- [Paula Stoll · Documentary Director](https://paulastoll)
+- [Guenter Krauss](https://gk.dailysh.it)
 
 <!-- ## How to run tests
 

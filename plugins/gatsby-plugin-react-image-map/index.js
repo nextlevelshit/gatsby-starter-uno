@@ -1,3 +1,14 @@
+/** 
+ *  @fileOverview Generate React Component for Image Map. This component
+ *                takes an array of `childImageSharp` elements and renders
+ *                them on separate layers inside a container. As soon as
+ *                the user starts moving the mouse or swipes the screen,
+ *                the images inside the container are exchanged.
+ *
+ *  @author       Michael Czechowski <mail@dailysh.it>
+ *
+ *  @requires     NPM: react, prop-types, gatsby-image
+ */
 import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
@@ -17,18 +28,41 @@ class ImageMap extends React.Component {
     }
   }
 
+  /**
+   * Calculates the distance between the current/last position
+   * of the mouse and a new point on the client screen.
+   *
+   * @param   {number} clientX      the x-axis coordinate
+   * @param   {number} [clientY=0]  the y-axis coordinate
+   *
+   * @returns {number} delta between clientX and clientY
+   */
   calculateDelta(clientX, clientY = 0) {   
     const { x , y } = this.currentPosition
 
     return Math.hypot((clientX - x), (clientY - y))
   }
-
+  /**
+   * Event handler for mouse movement. While tracking the current/last
+   * mouse position the distance to that point is calculated each mouse
+   * move, so as soons as the threshold is reached a new image will be
+   * set as active and the `currentPosition` will be updated.
+   *
+   * @param   {number} clientX      the x-axis coordinate
+   * @param   {number} [clientY=0]  the y-axis coordinate
+   *
+   * @returns {number} delta between clientX and clientY
+   */
   mouseMoved(e) {
     const { clientX, clientY } = e 
     const { threshold, nodes } = this.props
     const { active } = this.state
     const delta = this.calculateDelta(clientX, clientY)
 
+    /**
+     * If the threshold is reached, update the `currentPosition`
+     * and iterate to next image in `nodes`
+     */
     if(delta > threshold) {
       this.currentPosition = {
         x: clientX,
@@ -40,7 +74,9 @@ class ImageMap extends React.Component {
       })
     }
   }
-
+  /**
+   * Render react component
+   */
   render() {
     const { nodes, activeClass, imageStyle } = this.props
     const { active } = this.state
@@ -51,6 +87,10 @@ class ImageMap extends React.Component {
           const { fluid } = childImageSharp
           let { itemClass, itemStyle, activeStyle } = this.props
 
+          /**
+           * If the index matches `active`, concatinate the classes
+           * and styles of the image and image wrapper element.
+           */
           if (i === active) {
             itemClass = ([activeClass, itemClass]).join(` `)
             itemStyle = {
@@ -59,7 +99,6 @@ class ImageMap extends React.Component {
             }
           }
           
-
           return (
             <div className={itemClass} style={itemStyle} key={i}>
               <Img fluid={fluid} style={imageStyle} />
@@ -88,10 +127,13 @@ ImageMap.propTypes = {
 }
 
 ImageMap.defaultProps = {
-  nodes: [],
   activeClass: ``,
   activeStyle: {
     opacity: 1,
+  },
+  imageStyle: {
+    maxWidth: `100%`,
+    maxHeight: `100vh`,
   },
   itemClass: ``,
   itemStyle: {
@@ -105,10 +147,7 @@ ImageMap.defaultProps = {
     width: `100%`,
     height: `100%`,
   },
-  imageStyle: {
-    maxWidth: `100%`,
-    maxHeight: `100vh`,
-  },
+  nodes: [],
   threshold: 100
 }
 
