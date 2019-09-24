@@ -131,7 +131,7 @@ export default ImageMapContainer
 
 ## Examples
 
-- [Paula Stoll · Documentary Director](https://paulastoll)
+- [Paula Stoll · Documentary Director](https://paulastoll.de)
 - [Guenter Krauss](https://gk.dailysh.it)
 
 <!-- ## How to run tests

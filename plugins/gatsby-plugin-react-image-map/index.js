@@ -74,6 +74,29 @@ class ImageMap extends React.Component {
       })
     }
   }
+
+  touchMoved(e) {
+    const { touches } = e 
+    const { clientX } = touches[0]
+    const { threshold, nodes } = this.props
+    const { active } = this.state
+    const delta = this.calculateDelta(clientX)
+
+    /**
+     * If the threshold is reached, update the `currentPosition`
+     * and iterate to next image in `nodes`.
+     */
+    if(delta > threshold) {
+      this.currentPosition = {
+        x: clientX,
+        y: 0
+      }
+
+      this.setState({
+        active: (active + 1) % nodes.length
+      })
+    }
+  }
   /**
    * Render react component
    */
@@ -82,7 +105,7 @@ class ImageMap extends React.Component {
     const { active } = this.state
 
     return (
-      <div onMouseMove={this.mouseMoved.bind(this)}>
+      <div onMouseMove={this.mouseMoved.bind(this)} onTouchMove={this.touchMoved.bind(this)}>
         {nodes.length > 0 && nodes.map(({ childImageSharp }, i) => {
           const { fluid } = childImageSharp
           let { itemClass, itemStyle, activeStyle } = this.props
