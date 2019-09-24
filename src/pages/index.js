@@ -5,30 +5,30 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Display from "../components/display"
+import Cards from "../components/cards"
 
 const IndexPage = ({ isImprintCollapsed }) => {
   const data = useStaticQuery(graphql`
-    query SiteAuthorQuery {
+    query {
       site {
         siteMetadata {
           displayTitle,
           displaySubtitle
         }
+      },
+      dataJson {
+        cards {
+          title
+        }
       }
     }
   `)
-  const { site } = data
-  const { siteMetadata } = site
 
   return (
     <Layout isImprintCollapsed={isImprintCollapsed}>
       <SEO title="Home" />
-      <Display {...siteMetadata} />
-      <section id="anchore" className="flex flex-col justify-center">
-        <div className="text-center">
-          <em>Come back later.... right now there's nothing to see!</em>
-        </div>
-      </section>
+      <Display {...data.site.siteMetadata} />
+      <Cards {...data.dataJson} />
     </Layout>
   )
 }
