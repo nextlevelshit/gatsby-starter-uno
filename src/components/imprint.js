@@ -3,25 +3,27 @@ import React from "react"
 
 import NLS from "./../images/nls.svg";
 
-const Imprint = ({ authorFullAdress }) => {
+const Imprint = ({ authorFullAdress, authorProfiles }) => {
 
-  const fullAdress = authorFullAdress.map(adressLine => <>{adressLine} <br/></>)
+  const fullAdress = authorFullAdress.map((adressLine, i) => <span key={i}>{adressLine} <br/></span>)
 
   return (
-    <section class="imprint">
-      <div class="container">
-        <div class="flex flex-col lg:flex-row">
-          <div class="w-full lg:w-1/3">
-            <div class="lg:border-gray-700 lg:border-r pt-20">
+    <section className="imprint">
+      <div className="container">
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full lg:w-1/3">
+            <div className="lg:border-gray-700 lg:border-r pt-20">
               <p>
                 {fullAdress}
               </p>
-              <ul class="list --words">
-                <li><i>e</i> mail@paulastoll.com</li>
-              </ul>
+              {authorProfiles && <ul className="list --words">
+                {authorProfiles.map(({ link, text, indicator }, i) =>
+                  <li key={i}><i>{indicator}</i> <a href={link}>{text}</a></li>
+                )}
+              </ul>}
             </div>
           </div>
-          <div class="w-full lg:w-2/3 mt-8 lg:mt-0 lg:pl-20 py-20">
+          <div className="w-full lg:w-2/3 mt-8 lg:mt-0 lg:pl-20 py-20">
             <h2 id="information-according-to-§-5-tmg">Information according to § 5 TMG</h2>
             <p>
               {fullAdress}
@@ -56,11 +58,11 @@ const Imprint = ({ authorFullAdress }) => {
             As soon as we become aware of any infringements of the law, we will remove such content immediately.</p>
 
             <h3>Creator of this website</h3>
-            <div class="flex">
-              <div class="md:w-3/4 lg:w-5/6">
+            <div className="flex">
+              <div className="md:w-3/4 lg:w-5/6">
                 <p><i>Michael Czechowski</i> designed and programmed this piece of Internet. I thank him very much for his efforts, patience and technical vision. He is a <a href="https://dailysh.it">Designer, Philosopher and Consultant based in Berlin and Stuttgart</a>. He enriches the community with his <a href="https://dailysh.it">creative programming</a>.</p>
               </div>
-              <div class="md:w-1/4 lg:w-1/6 pl-3">
+              <div className="md:w-1/4 lg:w-1/6 pl-3">
                 <NLS className="w-full h-auto" />
               </div>
             </div>
@@ -75,10 +77,14 @@ Imprint.propTypes = {
   authorFullAdress: PropTypes.arrayOf(
     PropTypes.string
   ),
+  authorProfiles: PropTypes.arrayOf(
+    PropTypes.object
+  ),
 }
 
 Imprint.defaultProps = {
   authorFullAdress: [],
+  authorProfiles: [],
 }
 
 export default Imprint

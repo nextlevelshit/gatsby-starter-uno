@@ -8,9 +8,9 @@ const Footer = ({
   authorProfiles 
 }) => (
   <footer>
-    <div class="profiles">
+    <div className="profiles">
       Contact:
-      <ul>
+      {authorProfiles && <ul>
         {authorProfiles.map(({ link, text }, i) =>
           <li key={i}>
             <a href={link}>
@@ -18,9 +18,9 @@ const Footer = ({
             </a>
           </li>
         )}
-      </ul>
+      </ul>}
     </div>
-    <div class="copyright">
+    <div className="copyright">
       {new Date().getFullYear()} © {authorInfo}
     </div>
   </footer>
@@ -29,9 +29,7 @@ const Footer = ({
 Footer.propTypes = {
   title: PropTypes.string,
   authorInfo: PropTypes.string,
-  authorProfiles: PropTypes.arrayOf(
-    PropTypes.string
-  ),
+  authorProfiles: PropTypes.arrayOf(PropTypes.object),
 }
 
 Footer.defaultProps = {

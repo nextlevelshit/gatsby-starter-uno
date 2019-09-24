@@ -3,10 +3,10 @@ import React from "react"
 import ImageMap from "./image-map"
 
 const Display = ({ authorName, authorProfession }) => (
-  <section class="first-impression">
+  <section className="first-impression">
     <ImageMap />
-    <div class="container">
-      <div class="display" id="display">
+    <div className="container">
+      <div className="display" id="display">
         <h1>{authorName}</h1>
         <p>{authorProfession}</p>
       </div>

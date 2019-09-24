@@ -10,7 +10,13 @@ module.exports = {
     authorProfiles: [
       {
         text: `mail@paulastoll.com`,
-        link: `mailto:mail@paulastoll.com`
+        link: `mailto:mail@paulastoll.com`,
+        indicator: `e`
+      },
+      {
+        text: `@paulastoll`,
+        link: `https://instagram.com`,
+        indicator: `i`
       }
     ],
     authorFullAdress: [

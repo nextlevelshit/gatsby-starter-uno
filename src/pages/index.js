@@ -23,8 +23,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Display {...siteMetadata} />
-      <section id="anchore" class="flex flex-col justify-center">
-        <div class="text-center">
+      <section id="anchore" className="flex flex-col justify-center">
+        <div className="text-center">
           <em>Come back later.... right now there's nothing to see!</em>
         </div>
       </section>
