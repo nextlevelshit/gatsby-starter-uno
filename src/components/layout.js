@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Footer from "./footer"
 import Imprint from "./imprint"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isImprintCollapsed }) => {
   const data = useStaticQuery(graphql`
     query SiteMetaQuery {
       site {
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
     <main>
       <article>
         {children}
-        <Imprint {...siteMetadata}/>
+        <Imprint {...siteMetadata} isCollapsed={isImprintCollapsed} />
         <Footer {...siteMetadata} />
       </article>
     </main>
@@ -47,6 +47,12 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  isImprintCollapsed: PropTypes.bool
+}
+
+Layout.defaultProps = {
+  children: {},
+  isImprintCollapsed: true
 }
 
 export default Layout

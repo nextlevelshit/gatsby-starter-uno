@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -5,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Display from "../components/display"
 
-const IndexPage = () => {
+const IndexPage = ({ isImprintCollapsed }) => {
   const data = useStaticQuery(graphql`
     query SiteAuthorQuery {
       site {
@@ -20,7 +21,7 @@ const IndexPage = () => {
   const { siteMetadata } = site
 
   return (
-    <Layout>
+    <Layout isImprintCollapsed={isImprintCollapsed}>
       <SEO title="Home" />
       <Display {...siteMetadata} />
       <section id="anchore" className="flex flex-col justify-center">
@@ -30,6 +31,14 @@ const IndexPage = () => {
       </section>
     </Layout>
   )
+}
+
+IndexPage.propTypes = {
+  isImprintCollapsed: PropTypes.bool
+}
+
+IndexPage.defaultProps = {
+  isImprintCollapsed: true
 }
 
 export default IndexPage
