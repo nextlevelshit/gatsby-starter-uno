@@ -103,6 +103,69 @@ const Imprint = ({
               </div>
             </div>
 
+            <h3>External ressources</h3>
+            <ul className="list --bullets">
+              <li>
+                <a href="https://unsplash.com/photos/HSFEeS-Jvxw">
+                  Photo by Parker Whitson on Unsplash         
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/YXDTQ4e5wDo">
+                  Photo by Felipe Bustillo on Unsplash        
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/Vg1o2mipcJc">
+                  Photo by Mohammed Hassan on Unsplash        
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/6hUa_5hiDxw">
+                  Photo by Houcine Ncib on Unsplash           
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/0adw8Y-3OGA">
+                  Photo by christopher lemercier on Unsplash  
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/HGpfvykcI5U">
+                  Photo by Aditya Ali on Unsplash             
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/muvYcFC8UWA">
+                  Photo by Sunyu Kim on Unsplash              
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/lVmJ7cxIMFA">
+                  Photo by Oswaldo Ibáñez on Unsplash         
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/CUADwVXAlkk">
+                  Photo by Parker Whitson on Unsplash         
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/Jn9uPCJX2Ks">
+                  Photo by Caique Silva on Unsplash           
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/kqSazaTGriE">
+                  Photo by Emile Mbunzama on Unsplash         
+                </a>
+              </li>
+              <li>
+                <a href="https://unsplash.com/photos/nVu_pNoZYxg">
+                  Photo by Brian on Unsplash                  
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
