@@ -10,8 +10,8 @@ const IndexPage = () => {
     query SiteAuthorQuery {
       site {
         siteMetadata {
-          authorName,
-          authorProfession
+          displayTitle,
+          displaySubtitle
         }
       }
     }

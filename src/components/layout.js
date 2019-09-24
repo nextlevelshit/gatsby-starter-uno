@@ -17,14 +17,16 @@ const Layout = ({ children }) => {
     query SiteMetaQuery {
       site {
         siteMetadata {
-          title,
+          authorEmail
+          authorFullAdress,
           authorInfo, 
+          authorPhone,
           authorProfiles {
-            text,
-            link,
             indicator
+            link,
+            text,
           },
-          authorFullAdress
+          title,
         }
       }
     }

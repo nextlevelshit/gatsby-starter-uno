@@ -2,26 +2,26 @@ import PropTypes from "prop-types"
 import React from "react"
 import ImageMapContainer from "./image-map-container"
 
-const Display = ({ authorName, authorProfession }) => (
+const Display = ({ displayTitle, displaySubtitle }) => (
   <section className="first-impression">
     <ImageMapContainer />
     <div className="container">
       <div className="display" id="display">
-        <h1>{authorName}</h1>
-        <p>{authorProfession}</p>
+        <h1>{displayTitle}</h1>
+        <p>{displaySubtitle}</p>
       </div>
     </div>
   </section>
 )
 
 Display.propTypes = {
-  authorName: PropTypes.string,
-  authorProfession:  PropTypes.string
+  displayTitle: PropTypes.string.isRequired,
+  displaySubtitle:  PropTypes.string
 }
 
 Display.defaultProps = {
-  authorName: ``,
-  authorProfession: ``,
+  displayTitle: ``,
+  displaySubtitle: ``,
 }
 
 export default Display

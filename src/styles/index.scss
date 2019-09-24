@@ -40,21 +40,21 @@ section {
       }
     
       p {
-        @apply mt-8 -mr-8 text-r1 uppercase font-hairline tracking-wider text-primary-200;
+        @apply mt-8 -mr-8 text-r1 uppercase font-bold tracking-wide text-primary-200;
     
-        margin-right: calc(-1 * theme('letterSpacing.wider'));
+        margin-right: calc(-1 * theme('letterSpacing.wide'));
     
         @screen lg {
-          @apply tracking-widest;
+          @apply tracking-wider;
     
-          margin-right: calc(-1 * theme('letterSpacing.widest'));
+          margin-right: calc(-1 * theme('letterSpacing.wider'));
         }
       }
     }
   }
 
   &.imprint {
-    @apply bg-gray-900 text-white pt-0;
+    @apply bg-gray-900 text-gray-400 pt-0;
 
     a {
       &:hover,
@@ -66,6 +66,16 @@ section {
     
       &:active {
         color: $primary-color;
+      }
+    }
+
+    .list {
+
+      &.--words {
+
+        i {
+          @apply text-gray-600;
+        }
       }
     }
   }

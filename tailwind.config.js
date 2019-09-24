@@ -19,9 +19,9 @@ module.exports = {
       '2xl': '2rem',
       '3xl': '2.5rem',
       '4xl': '5rem',
-      'r1': '1vw',
+      'r1': '1.5vw',
       'r2': '4vw',
-      'r3': '7vw'
+      'r3': '9vw'
     },
     opacity: {
       ...opacity,

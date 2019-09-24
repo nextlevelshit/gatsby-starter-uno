@@ -3,28 +3,31 @@ module.exports = {
     title: `Minimal Gatsby Starter Template for a Landingpage with TailwindCSS`,
     description: `Perfect Gatsby Starter Template if you intend to built a minimal landingpage with TailwindCSS support.`,
     author: `@nextlevelsh_it`,
-    authorEmail: `mail@paulastoll.de`,
-    authorName: `Paula Stoll`,
-    authorProfession: `Documentary Director`,
-    authorInfo: `Paula Stoll · Documentary director · Berlin (Germany)`,
+    authorEmail: `mail@dailysh.it`,
+    authorName: `Michael Czechowski`,
+    authorPhone: `Can be requested by email`,
+    authorProfession: `Designer, Consultant and Philosopher`,
+    authorInfo: `Michael Czechowski · Designer, Consultant and Philosopher · Stuttgart (Germany)`,
     authorProfiles: [
       {
-        text: `mail@paulastoll.com`,
-        link: `mailto:mail@paulastoll.com`,
-        indicator: `e`
+        text: `mail@dailysh.it`,
+        link: `mailto:mail@dailysh.it`,
+        indicator: `email`
       },
       {
-        text: `@paulastoll`,
-        link: `https://instagram.com`,
-        indicator: `i`
+        text: `@nextlevelsh_it`,
+        link: `https://instagram.com/`,
+        indicator: `instagram`
       }
     ],
     authorFullAdress: [
-      `Paula Stoll`,
-      `Skalitzer Str. 6`,
-      `10999 Berlin`,
+      `Michael Czechowski`,
+      `Schlosserstr. 33`,
+      `70180 Stuttgart`,
       `Germany`
-    ]
+    ],
+    displayTitle: `Uno 1.0`,
+    displaySubtitle: `GatsbyJS Starter Template`
   },
   plugins: [
     {
