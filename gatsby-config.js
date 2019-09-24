@@ -16,8 +16,8 @@ module.exports = {
       },
       {
         text: `@nextlevelsh_it`,
-        link: `https://instagram.com/`,
-        indicator: `instagram`
+        link: `https://twitter.com/nextlevelsh_it`,
+        indicator: `twitter`
       }
     ],
     authorFullAdress: [
@@ -51,12 +51,7 @@ module.exports = {
         modalProps: { },
       }
     },
-    {
-      resolve: `gatsby-plugin-react-image-map`,
-      options: {
-        path: `${__dirname}/src/images/image-map`
-      }
-    },
+    `gatsby-plugin-react-image-map`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
