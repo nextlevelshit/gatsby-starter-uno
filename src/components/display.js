@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
-import ImageMap from "./image-map"
+import ImageMapContainer from "./image-map-container"
 
 const Display = ({ authorName, authorProfession }) => (
   <section className="first-impression">
-    <ImageMap />
+    <ImageMapContainer />
     <div className="container">
       <div className="display" id="display">
         <h1>{authorName}</h1>
