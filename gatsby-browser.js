@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import "./src/styles/index.scss"
-
 // exports.onInitialClientRender = () => {
 //   console.log("ReactDOM.render has executed")
 // }
@@ -14,3 +12,10 @@ import "./src/styles/index.scss"
 //   console.log('new pathname', location.pathname)
 //   console.log('old pathname', prevLocation ? prevLocation.pathname : null)
 // }
+
+exports.shouldUpdateScroll = ({
+  routerProps: { location },
+  getSavedScrollPosition,
+}) => {
+  return false
+}

@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
 import Imprint from "./imprint"
+import "./../styles/index.scss"
 
 const Layout = ({ children, isImprintCollapsed }) => {
   const data = useStaticQuery(graphql`

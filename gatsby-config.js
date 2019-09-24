@@ -27,7 +27,8 @@ module.exports = {
       `Germany`
     ],
     displayTitle: `Uno 1.0`,
-    displaySubtitle: `GatsbyJS Starter Template`
+    displaySubtitle: `GatsbyJS Starter Template`,
+    transitionDelay: 500
   },
   plugins: [
     {

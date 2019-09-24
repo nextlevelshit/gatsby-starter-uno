@@ -11,9 +11,7 @@ const Imprint = ({
   authorPhone,
   isCollapsed
 }) => {
-
-  console.log(isCollapsed)
-
+  
   const fullAdress = authorFullAdress.map((adressLine, i) => {
     return <span key={i}>{adressLine} <br/></span>
   })
