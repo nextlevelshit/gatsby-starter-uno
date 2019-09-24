@@ -42,18 +42,27 @@ class ImageMap extends React.Component {
   }
 
   render() {
-    const { nodes, itemClass, activeClass } = this.props
+    const { nodes, activeClass, imageStyle } = this.props
     const { active } = this.state
 
     return (
       <div onMouseMove={this.mouseMoved.bind(this)}>
         {nodes.length > 0 && nodes.map(({ childImageSharp }, i) => {
           const { fluid } = childImageSharp
-          const className = i === active ? `${itemClass} ${activeClass}` : itemClass
+          let { itemClass, itemStyle, activeStyle } = this.props
+
+          if (i === active) {
+            itemClass = ([activeClass, itemClass]).join(` `)
+            itemStyle = {
+              ...itemStyle,
+              ...activeStyle
+            }
+          }
+          
 
           return (
-            <div className={className} key={i}>
-              <Img fluid={fluid} />
+            <div className={itemClass} style={itemStyle} key={i}>
+              <Img fluid={fluid} style={imageStyle} />
             </div>
           )
         })}
@@ -71,14 +80,35 @@ ImageMap.propTypes = {
     })
   ),
   activeClass: PropTypes.string,
+  activeStyle: PropTypes.object,
   itemClass: PropTypes.string,
+  itemStyle: PropTypes.object,
+  imageStyle: PropTypes.object,
   threshold: PropTypes.number,
 }
 
 ImageMap.defaultProps = {
   nodes: [],
-  activeClass: `--active`,
+  activeClass: ``,
+  activeStyle: {
+    opacity: 1,
+  },
   itemClass: ``,
+  itemStyle: {
+    position: `absolute`,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    display: `block`,
+    opacity: 0,
+    width: `100%`,
+    height: `100%`,
+  },
+  imageStyle: {
+    maxWidth: `100%`,
+    maxHeight: `100vh`,
+  },
   threshold: 100
 }
 

@@ -26,19 +26,7 @@ section {
       @apply absolute inset-0;
 
       &__inner {
-        @apply absolute inset-0 block opacity-0 w-full h-full;
-
-        img {
-          @apply absolute top-0 left-0 w-full h-full object-cover object-center;
-          max-width: 100%;
-          max-height: 100vh;
-        }
-
         mix-blend-mode: lighten;
-
-        &.--active {
-          @apply opacity-50;
-        }
       }
     }
 
@@ -49,13 +37,6 @@ section {
     
       h1 {
         @apply relative text-r3 uppercase text-secondary-100 font-normal whitespace-no-wrap;
-
-        &:before {
-          @apply fixed text-white opacity-50;
-
-          content: 'Paula Stoll';
-          mix-blend-mode: overlay;
-        }
       }
     
       p {
