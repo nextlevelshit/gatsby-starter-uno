@@ -6,7 +6,7 @@ import ImageMap from "./../../plugins/gatsby-plugin-react-image-map"
 const ImageMapContainer = () => {
   const data = useStaticQuery(graphql`
     query ImageMapQuery {
-      allFile(filter: {relativePath: {regex: "/images/image-map/"}}) {
+      allFile(filter: {sourceInstanceName: {eq: "image-map"}}) {
         nodes {
           childImageSharp {
             fluid {

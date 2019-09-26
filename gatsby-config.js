@@ -51,16 +51,23 @@ module.exports = {
         modalProps: { },
       }
     },
-    `gatsby-plugin-react-image-map`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `data`,
+        path: `${__dirname}/src/data/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `image-map`,
+        path: `${__dirname}/src/images/image-map/`,
+      },
+    },
+    `gatsby-plugin-react-image-map`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
