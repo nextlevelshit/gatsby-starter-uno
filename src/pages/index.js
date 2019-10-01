@@ -18,7 +18,8 @@ const IndexPage = ({ isImprintCollapsed }) => {
       },
       dataJson {
         cards {
-          title
+          title,
+          link
         }
       }
     }

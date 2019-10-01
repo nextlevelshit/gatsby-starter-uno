@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Be+Vietnam:700,800&display=swap');
 
+* {
+  outline: none;
+}
+
 html, body {
   @apply font-sans m-0 p-0;
 }
@@ -142,4 +146,9 @@ article {
       }
     }
   }
+}
+
+main {
+  transition: transform 660ms cubic-bezier(.86,0,.32,1);
+  transform: translate3d(0, 0, 0);
 }

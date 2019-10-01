@@ -17,5 +17,12 @@ exports.shouldUpdateScroll = ({
   routerProps: { location },
   getSavedScrollPosition,
 }) => {
+  // const { pathname } = location
+  // const scrollToTopRoutes = [`/privacy-policy`, `/page-2`]
+
+  // if (scrollToTopRoutes.indexOf(pathname) !== -1) {
+  //   window.scrollTo(0,0)
+  // }
+
   return false
 }

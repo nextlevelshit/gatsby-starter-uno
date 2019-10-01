@@ -1,22 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 class Cards extends React.Component {
 
-  // constructor(props) {
-  //   super(props)
-  // }
-
   render() {
-
     const { cards } = this.props
 
     return (
       <section className="flex flex-col justify-center">
         <div className="container">
           {cards.length > 0 && <div className="cards">
-            {cards.map(({ title }, i) => 
-              <div className="cards__item" key={i}>{title}</div>
+            {cards.map(({ title, link }, i) => 
+              <div className="cards__item" key={i}>
+              {link && <Link to={link}>
+                {title}
+              </Link>}
+
+              {!link && <>{title}</>}
+              </div>
             )}
           </div>}
         </div>
@@ -26,7 +28,12 @@ class Cards extends React.Component {
 }
 
 Cards.propTypes = {
-  cards: PropTypes.array
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      link: PropTypes.string,
+    })
+  )
 }
 
 Cards.defaultProps = {

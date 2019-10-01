@@ -1,7 +1,8 @@
 {
   "cards": [
     {
-      "title": "What?"
+      "title": "What?",
+      "link": "/modal-what"
     },
     {
       "title": "Why?"

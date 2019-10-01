@@ -40,17 +40,6 @@ module.exports = {
         ]
       },
     },
-    {
-      resolve: `gatsby-plugin-modal-routing`,
-      options: {
-        // A selector to set react-modal's app root to, default is `#___gatsby`
-        // See http://reactcommunity.org/react-modal/accessibility/#app-element
-        appElement: '#___gatsby',
-        // Object of props that will be passed to the react-modal container
-        // See http://reactcommunity.org/react-modal/#usage
-        modalProps: { },
-      }
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     {
@@ -65,6 +54,34 @@ module.exports = {
       options: {
         name: `image-map`,
         path: `${__dirname}/src/images/image-map/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            }
+          },
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: `_blank`,
+              rel: `nofollow noopener noreferrer`,
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+        ],
       },
     },
     `gatsby-plugin-react-image-map`,

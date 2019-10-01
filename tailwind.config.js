@@ -9,7 +9,7 @@ module.exports = {
       primary: colors.gray,
       secondary: colors.orange,
       black: '#2D2D2A',
-      white: colors.white
+      white: colors.white,
     },
     fontSize: {
       sm: '.675rem',
@@ -21,12 +21,13 @@ module.exports = {
       '4xl': '5rem',
       'r1': '1.5vw',
       'r2': '4vw',
-      'r3': '9vw'
+      'r3': '9vw',
     },
     opacity: {
       ...opacity,
       '5': '.05',
-      '10': '.1'
+      '10': '.1',
+      '90': '.9',
     },
     fontFamily: {
       ...fontFamily,
@@ -36,7 +37,7 @@ module.exports = {
     letterSpacing: {
       ...letterSpacing,
       wider: '0.6rem',
-      widest: '1rem'
+      widest: '1rem',
     }
   },
   container: {

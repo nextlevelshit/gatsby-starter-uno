@@ -1,19 +1,14 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
 import Imprint from "./imprint"
+import Modal from "./modal"
+import IndexPage from "./../pages/index"
 import "./../styles/index.scss"
 
-const Layout = ({ children, isImprintCollapsed }) => {
+const Layout = ({ children, isImprintCollapsed, isModal }) => {
   const data = useStaticQuery(graphql`
     query SiteMetaQuery {
       site {
@@ -35,6 +30,17 @@ const Layout = ({ children, isImprintCollapsed }) => {
   const { site } = data
   const { siteMetadata } = site
 
+  if (isModal && children) {
+    return (
+      <>
+        <IndexPage />
+        <Modal>
+          {children}
+        </Modal>
+      </>
+    )
+  }
+
   return (
     <main>
       <article>
@@ -48,12 +54,15 @@ const Layout = ({ children, isImprintCollapsed }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  isImprintCollapsed: PropTypes.bool
+  isImprintCollapsed: PropTypes.bool,
+  isModal: PropTypes.bool,
+  location: PropTypes.string,
 }
 
 Layout.defaultProps = {
   children: {},
-  isImprintCollapsed: true
+  isImprintCollapsed: true,
+  isModal: false
 }
 
 export default Layout
