@@ -37,16 +37,21 @@ class Modal extends React.Component {
     })
   }
 
-  hideModal(event) {
+  componentWillUnmount() {
     const { scrollPositionOnModalOpen } = this.state
+
+    console.log(scrollPositionOnModalOpen)
+
+    window.scrollTo(0, scrollPositionOnModalOpen)
+  }
+
+  hideModal(event) {
 
     this.setState({
       showModal: false
     })
 
-    navigate(`/`, { replace: true })
-
-    window.scrollTo(0, scrollPositionOnModalOpen)
+    window.history.back()
   }
 
   render() {

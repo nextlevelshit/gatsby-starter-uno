@@ -5,7 +5,7 @@ import IndexPage from "../pages/index"
 const ImprintPage = () => {
 
   return (
-    <IndexPage isImprintCollapsed={false}/>
+    <IndexPage isImprintCollapsed={false} />
   )
 }
 

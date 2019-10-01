@@ -5,9 +5,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Display from "../components/display"
+import Modal from "../components/modal"
 import Cards from "../components/cards"
 
-const IndexPage = ({ isImprintCollapsed }) => {
+const IndexPage = ({ isImprintCollapsed, isModalOpen }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -30,16 +31,24 @@ const IndexPage = ({ isImprintCollapsed }) => {
       <SEO title="Home" />
       <Display {...data.site.siteMetadata} />
       <Cards {...data.dataJson} />
+      {isModalOpen && 
+        <Modal>
+          {/* {children} */}
+          TEST
+        </Modal>
+      }
     </Layout>
   )
 }
 
 IndexPage.propTypes = {
-  isImprintCollapsed: PropTypes.bool
+  isImprintCollapsed: PropTypes.bool,
+  isModalOpen: PropTypes.bool,
 }
 
 IndexPage.defaultProps = {
-  isImprintCollapsed: true
+  isImprintCollapsed: true,
+  isModalOpen: false
 }
 
 export default IndexPage

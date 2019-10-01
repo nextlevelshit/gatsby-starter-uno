@@ -30,16 +30,16 @@ const Layout = ({ children, isImprintCollapsed, isModal }) => {
   const { site } = data
   const { siteMetadata } = site
 
-  if (isModal && children) {
-    return (
-      <>
-        <IndexPage />
-        <Modal>
-          {children}
-        </Modal>
-      </>
-    )
-  }
+  // if (isModal && children) {
+  //   return (
+  //     <>
+  //       <IndexPage />
+  //       <Modal>
+  //         {children}
+  //       </Modal>
+  //     </>
+  //   )
+  // }
 
   return (
     <main>
