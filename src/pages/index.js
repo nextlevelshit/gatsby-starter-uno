@@ -31,6 +31,7 @@ const IndexPage = ({ isImprintCollapsed, isModalOpen, children }) => {
       <SEO title="Home" />
       <Display {...data.site.siteMetadata} />
       <Cards {...data.dataJson} />
+      
       {isModalOpen && children && 
         <Modal>
           {children}

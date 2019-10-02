@@ -43,7 +43,6 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isImprintCollapsed: PropTypes.bool,
   isModal: PropTypes.bool,
-  location: PropTypes.string,
 }
 
 Layout.defaultProps = {

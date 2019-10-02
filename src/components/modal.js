@@ -12,14 +12,14 @@ class Modal extends React.Component {
 
   classes = {
     overlayClassName: {
-      base: `ReactModal__Overlay`,
-      afterOpen: `ReactModal__Overlay--after-open`
+      base: `modal__backdrop`,
+      afterOpen: `modal__backdrop--after-open`
     },
     className: {
-      base: `ReactModal__Content`,
-      afterOpen: `ReactModal__Content--after-open`
+      base: `modal__inner`,
+      afterOpen: `modal__inner--after-open`
     },
-    bodyOpenClassName: `ReactModal__Body--open`
+    bodyOpenClassName: `modal__body--open`
   }
 
   options = {

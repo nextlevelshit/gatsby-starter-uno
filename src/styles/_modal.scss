@@ -8,9 +8,9 @@
   --modal-body-shift:           -10vw;
 }
 
-.ReactModal {
+.modal {
 
-  &__Content {
+  &__inner {
     @apply fixed inset-y-0 bg-black text-white overflow-y-auto z-20;
 
     left: 100vw;
@@ -35,18 +35,6 @@
       }
     }
 
-    &--before-close {
-      @apply block opacity-0;
-
-      left: 100vw;
-      right: -100vw;
-      width: 100vw;
-  
-      @screen lg {
-        width: 50vw;
-      }
-    }
-
     h1 {
       @apply text-2xl font-hairline mt-8;
     }
@@ -68,7 +56,7 @@
     }
   }
 
-  &__Overlay {
+  &__backdrop {
     @apply block fixed inset-0 z-0;
 
     background: rgba(var(--modal-overlay-color), 0);
@@ -79,14 +67,9 @@
 
       background: rgba(var(--modal-overlay-color), var(--modal-overlay-alpha));
     }
-
-    &--before-close {
-      @apply block inset-0 z-0;
-      background: rgba(var(--modal-overlay-color), 0);
-    }
   }
 
-  &__Body--open {
+  &__body--open {
     @apply overflow-hidden;
 
     main {
