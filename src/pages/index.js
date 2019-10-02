@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Display from "../components/display"
-import Modal from "../components/modal"
+import Modal from "../components/modal/modal.component"
 import Cards from "../components/cards"
 
 const IndexPage = ({ isImprintCollapsed, isModalOpen, children }) => {

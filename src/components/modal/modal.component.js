@@ -2,6 +2,8 @@ import React from "react"
 import ReactModal from "react-modal"
 import { navigate } from "gatsby"
 
+import "./modal.component.scss"
+
 /**
  * Necessary implementation for screen-readers. Read more:
  * http://reactcommunity.org/react-modal/examples/set_app_element.html
