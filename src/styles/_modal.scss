@@ -1,13 +1,23 @@
+@import 'variables';
+
+:root {
+  --modal-transition-duration:  660ms;
+  --modal-overlay-color:        255, 255, 255;
+  --modal-overlay-alpha:        0.9;        
+  --modal-timing-function:      cubic-bezier(.86 ,0, .32, 1);
+  --modal-body-shift:           -10vw;
+}
+
 .ReactModal {
 
   &__Content {
-    @apply fixed inset-y-0 bg-black text-white overflow-y-auto opacity-100 z-20;
+    @apply fixed inset-y-0 bg-black text-white overflow-y-auto z-20;
 
-    // transform: translate3D(, 0, 0);
     left: 100vw;
     right: -100vw;
-    transition: all 660ms cubic-bezier(.86,0,.32,1);
-    // transition-property: left, right;
+    transition-duration: var(--modal-transition-duration);
+    transition-timing-function: var(--modal-timing-function);
+    transition-property: left, right;
     width: 100vw;
 
     @screen lg {
@@ -15,9 +25,8 @@
     }
   
     &--after-open {
-      @apply block opacity-100;
+      @apply block;
   
-      // transform: translate3D(0, 0, 0);
       left: 0;
       right: 0;
   
@@ -37,28 +46,51 @@
         width: 50vw;
       }
     }
+
+    h1 {
+      @apply text-2xl font-hairline mt-8;
+    }
+  
+    h2 {
+      @apply text-xl mt-12;
+    }
+  
+    p {
+      @apply leading-relaxed opacity-90;
+  
+      @screen lg {
+        @apply w-2/3;
+      }
+    }
+  
+    .container {
+      @apply py-20;
+    }
   }
 
-  &__Overlay{
-    @apply block fixed inset-0 opacity-0 z-0;
+  &__Overlay {
+    @apply block fixed inset-0 z-0;
 
-    background: rgba(255, 255, 255, 0.9);
-    transition: all 440ms;
+    background: rgba(var(--modal-overlay-color), 0);
+    transition: all var(--modal-transition-duration);
   
     &--after-open {
-      @apply opacity-100 z-10;
+      @apply z-10;
+
+      background: rgba(var(--modal-overlay-color), var(--modal-overlay-alpha));
     }
 
     &--before-close {
-      @apply block inset-0 opacity-0 z-0;
+      @apply block inset-0 z-0;
+      background: rgba(var(--modal-overlay-color), 0);
     }
   }
 
   &__Body--open {
-    // @apply overflow-hidden;
+    @apply overflow-hidden;
 
     main {
-      transform: translate3d(-200px, 0, 0);
+      transform: translate3d(var(--modal-body-shift), 0, 0);
     }
   }
 
@@ -69,25 +101,10 @@
       @apply opacity-50;
     }
   }
-
-  h1 {
-    @apply text-2xl font-hairline mt-8;
-  }
-
-  h2 {
-    @apply text-xl mt-12;
-  }
-
-  p {
-    @apply leading-relaxed opacity-90;
-
-    @screen lg {
-      // @apply w-2/3;
-    }
-  }
-
-  .container {
-    @apply pb-32;
-  }
 }
 
+main {
+  transition-duration: var(--modal-transition-duration);
+  transition-timing-function: var(--modal-timing-function);
+  transform: translate3d(0, 0, 0);
+}

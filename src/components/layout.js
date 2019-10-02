@@ -4,8 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
 import Imprint from "./imprint"
-import Modal from "./modal"
-import IndexPage from "./../pages/index"
 import "./../styles/index.scss"
 
 const Layout = ({ children, isImprintCollapsed, isModal }) => {
@@ -29,17 +27,6 @@ const Layout = ({ children, isImprintCollapsed, isModal }) => {
   `)
   const { site } = data
   const { siteMetadata } = site
-
-  // if (isModal && children) {
-  //   return (
-  //     <>
-  //       <IndexPage />
-  //       <Modal>
-  //         {children}
-  //       </Modal>
-  //     </>
-  //   )
-  // }
 
   return (
     <main>

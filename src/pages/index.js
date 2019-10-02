@@ -8,7 +8,7 @@ import Display from "../components/display"
 import Modal from "../components/modal"
 import Cards from "../components/cards"
 
-const IndexPage = ({ isImprintCollapsed, isModalOpen }) => {
+const IndexPage = ({ isImprintCollapsed, isModalOpen, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -31,10 +31,9 @@ const IndexPage = ({ isImprintCollapsed, isModalOpen }) => {
       <SEO title="Home" />
       <Display {...data.site.siteMetadata} />
       <Cards {...data.dataJson} />
-      {isModalOpen && 
+      {isModalOpen && children && 
         <Modal>
-          {/* {children} */}
-          TEST
+          {children}
         </Modal>
       }
     </Layout>
