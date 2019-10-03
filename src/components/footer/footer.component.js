@@ -1,6 +1,7 @@
-// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+
+import "./footer.component.scss"
 
 const Footer = ({ 
   title,

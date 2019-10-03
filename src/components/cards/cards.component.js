@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import "./cards.component.scss"
+
 class Cards extends React.Component {
 
   render() {

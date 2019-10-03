@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Footer from "./footer"
-import Imprint from "./imprint"
+import Footer from "./footer/footer.component"
+import Imprint from "./imprint/imprint.component"
 import "./../styles/index.scss"
 
 const Layout = ({ children, isImprintCollapsed, isModal }) => {

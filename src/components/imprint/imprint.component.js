@@ -2,7 +2,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Link } from "gatsby"
 
-import NLS from "./../images/nls.svg";
+import "./imprint.component.scss"
+import NLS from "./../../images/nls.svg";
 
 class Imprint extends React.Component {
 

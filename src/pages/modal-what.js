@@ -4,7 +4,9 @@ import IndexPage from "./index"
 
 const ModalWhatPage = () => (
   <IndexPage isModalOpen={true}>
-    TESTY
+    TESTY DASDJLKSAJDKSAJD
+
+    <h2>test</h2>
   </IndexPage>
 )
 

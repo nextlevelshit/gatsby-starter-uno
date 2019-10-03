@@ -1,5 +1,3 @@
-@import 'variables';
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Be+Vietnam:700,800&display=swap');
 
 * {
@@ -47,7 +45,7 @@ h2 {
   //     left: -0.5rem;
   //     right: -0.5rem;
   //     bottom: 10%;
-  //     background-color: $primary-color-lighter;
+  //     background-color: var(--color-primary-lighter);
   //     z-index: -1;
   //   }
   // }
@@ -67,7 +65,7 @@ h3 {
   //     left: -0.2rem;
   //     right: -0.2rem;
   //     bottom: 10%;
-  //     background-color: $secondary-color-lighter;
+  //     background-color: var(--color-secondary)-lighter;
   //     z-index: -1;
   //   }
   // }
@@ -88,18 +86,18 @@ p {
 a {
   @apply underline cursor-pointer;
 
-  text-decoration-color: $primary-color-lighter;
+  text-decoration-color: var(--color-primary-lighter);
   transition: all 160ms;
 
   &:hover,
   &:focus {
     @apply no-underline;
 
-    color: $primary-color-darker;
+    color: var(--color-primary-darker);
   }
 
   &:active {
-    color: $primary-color-darker;
+    color: var(--color-primary-darker);
   }
 
   &[href^=tel] {
@@ -119,31 +117,4 @@ blockquote {
   small {
     @apply text-sm;
   }
-}
-
-article {
-
-  footer {
-    @apply fixed bottom-0 left-0 right-0 flex justify-between p-5 text-sm bg-white;
-
-    ul {
-      @apply flex flex-row;
-
-      li {
-        @apply pl-2;
-      }
-    }
-
-    .profiles {
-      @apply flex;
-    }
-
-    .copyright {
-      @apply text-right hidden;
-
-      @screen lg {
-        @apply inline-block;
-      }
-    }
-  }
-}
+} 

@@ -5,116 +5,14 @@
 @import 'variables';
 @import 'base';
 
-@import 'cards';
 @import 'grid';
 @import 'list';
 @import 'picture';
-
-:root {
-  --app-height: 100vh;
-}
 
 section {
   @apply flex flex-col py-24 mt-0 bg-white;
 
   min-height: var(--app-height);
-
-  &.first-impression {
-    @apply bg-primary-900 overflow-hidden justify-center relative;
-
-    .bg {
-      @apply absolute inset-0;
-
-      &__inner {
-        mix-blend-mode: lighten;
-      }
-    }
-
-    .display {
-      @apply flex text-center items-center flex-col justify-center;
-    
-      transition: all 20ms;
-    
-      h1 {
-        @apply relative text-r3 uppercase text-secondary-100 font-normal whitespace-no-wrap;
-      }
-    
-      p {
-        @apply mt-8 -mr-8 text-r1 uppercase font-bold tracking-wide text-primary-200;
-    
-        margin-right: calc(-1 * theme('letterSpacing.wide'));
-    
-        @screen lg {
-          @apply tracking-wider;
-    
-          margin-right: calc(-1 * theme('letterSpacing.wider'));
-        }
-      }
-    }
-  }
-
-  &.imprint {
-    $this-background: theme('colors.gray.900');
-
-    @apply text-gray-400 pt-0;
-
-    background: $this-background;
-
-    a {
-      &:hover,
-      &:focus {
-        @apply no-underline;
-    
-        color: $primary-color;
-      }
-    
-      &:active {
-        color: $primary-color;
-      }
-    }
-
-    .list {
-
-      &.--words {
-
-        i {
-          @apply text-gray-600;
-        }
-      }
-    }
-
-    .readmore {
-      $this-height: 40rem;
-
-      @apply relative;
-
-      max-height: 100%;
-      padding-bottom: $this-height;
-      transition: all $transition-duration;
-
-      &.--collapsed {
-        @apply overflow-hidden;
-
-        max-height: $this-height;
-        overflow: hidden;
-
-        &:after {
-          @apply opacity-100 bottom-0;
-        }
-      }
-
-      &:after {
-        @apply absolute opacity-0 w-full;
-
-        content: "";
-        height: $this-height;
-        bottom: 0;
-        background: linear-gradient(0deg, $this-background, rgba(#1a202c, 0));
-        transition: all $transition-duration;
-
-      }
-    }
-  }
 }
 
 .container {
