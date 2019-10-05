@@ -100,8 +100,6 @@ class Modal extends React.Component {
       })
       navigate(`/`)
     }, closeTimeout)
-
-    // 
   }
   /**
    * Applys all CSS Variables to the document so the stylesheet

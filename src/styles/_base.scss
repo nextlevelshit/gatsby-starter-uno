@@ -90,7 +90,7 @@ p {
 }
 
 a {
-  @apply underline cursor-pointer;
+  @apply no-underline cursor-pointer;
 
   text-decoration-color: var(--color-primary-lighter);
   transition: all 160ms;

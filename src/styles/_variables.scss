@@ -6,8 +6,9 @@
 
   // ----------------------------------------------------------------
   // #COLORS
-  --color-primary:                theme('colors.primary.200');
   --color-primary-lighter:        theme('colors.primary.100');
+  --color-primary-light:          theme('colors.primary.300');
+  --color-primary:                theme('colors.primary.500');
   --color-primary-darker:         theme('colors.primary.900');
   
   --color-secondary:              theme('colors.secondary.200');
@@ -18,6 +19,6 @@
 
   // ----------------------------------------------------------------
   // #ANIMATIONS & #TRANSITIONS
-  --transition-duration:          300ms;
+  --transition-duration:          160ms;
   --transition-timing-function:   cubic-bezier(.86 ,0, .32, 1);
 }

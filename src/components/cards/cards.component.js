@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import ScrollCards from "./../../../plugins/gatsby-plugin-react-scroll-cards"
 
 import "./cards.component.scss"
@@ -21,7 +21,7 @@ const Cards = () =>  {
 
   return (
     <>
-      <ScrollCards {...data.allMarkdownRemark} hasIndicator={true} />
+      <ScrollCards {...data.allMarkdownRemark} />
     </>
   )
 }
