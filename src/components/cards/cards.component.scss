@@ -1,64 +1,36 @@
-.cards {
+.nls-scroll-cards {
 
-  &__preview {
+  &__item {
+    @apply shadow-top-xl;
 
-    @apply w-full mb-8;
-    
-    @screen md {
-      @apply w-1/4 mb-0;
-    }
+    &__content {
+      @apply py-20 relative;
 
-    img {
-      @apply h-auto rounded-sm border shadow-md mx-auto;
-
-      max-width: 10rem;
-
-      @screen md {
-        @apply w-1/4 w-full max-w-full;
-      }
-    }
-  }
+      &:after {
+        @apply absolute inset-x-0 bottom-0 z-10;
   
-  &__teaser {
-    @apply w-full pl-0;
-
-    @screen md {
-      @apply w-3/4 pl-8;
-    }
-  }
-
-  li {
-    @apply flex flex-col border rounded p-4 mb-10;
-
-    @screen md {
-      @apply flex-row;
-    }
-
-    a {
-      @apply inline-block border rounded-sm no-underline px-3 py-2 mt-4 mr-2 whitespace-no-wrap text-base;
-
-      border-color: var(--color-primary);
-      color: var(--color-primary);
-
-      &:before {
-        content: '› ';
-      }
-
-      &:hover {
-        @apply opacity-75;
+        content: "";
+        height: 75%;
+        background-color: rgba(255,255,255,0);
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
       }
     }
+
+    &__title {
+        
+    }
+
+
   }
 
-  h4 {
-    @apply mt-0 font-normal;
-  }
+  &__indicator {
 
-  p {
-    @apply font-normal text-base;
-  }
+    &__title {
+      
+    }
 
-  blockquote {
-    @apply w-full p-0 m-0;
+    .container {
+      // @apply my-20;
+    }
   }
 }

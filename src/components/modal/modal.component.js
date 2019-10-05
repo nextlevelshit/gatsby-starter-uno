@@ -118,8 +118,7 @@ class Modal extends React.Component {
    */
   removeCssVariables() {
     Object.keys(this.cssVariables).forEach(key => {
-      const value = this.cssVariables[key]
-      document.documentElement.style.removeProperty(key, value)
+      document.documentElement.style.removeProperty(key)
     }) 
   }
 }

@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  @apply mb-0 font-display;
+  @apply mb-0 font-display text-2xl;
 }
 
 h2, h3, h4 {
@@ -80,7 +80,13 @@ h4 {
 }
 
 p {
-  @apply mb-3 leading-normal font-normal;
+  @apply mb-3 leading-normal font-normal text-justify ;
+
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;   
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
 }
 
 a {

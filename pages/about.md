@@ -1,7 +1,0 @@
----
-modal: true
----
-
-# About
-
-Testing

@@ -1,7 +1,7 @@
 .imprint {
   --imprint-background: theme('colors.gray.900');
 
-  @apply text-gray-400 pt-0;
+  @apply text-gray-400 pt-0 z-30 sticky;
 
   background: var(--imprint-background);
 
@@ -11,7 +11,6 @@
       @apply no-underline;
   
       color: var(--color-primary);
-      
     }
   
     &:active {

@@ -1,45 +1,29 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { useStaticQuery } from "gatsby"
+import ScrollCards from "./../../../plugins/gatsby-plugin-react-scroll-cards"
 
 import "./cards.component.scss"
 
-class Cards extends React.Component {
+const Cards = () =>  {
+  const data = useStaticQuery(graphql`
+    query CardsMarkdownQuery {
+      allMarkdownRemark(filter: {frontmatter: {modal: {eq: true}}}) {
+        nodes {
+          frontmatter {
+            title
+            modal
+          }
+          html
+        }
+      }
+    }
+  `)
 
-  render() {
-    const { cards } = this.props
-
-    return (
-      <section className="flex flex-col justify-center">
-        <div className="container">
-          {cards.length > 0 && <div className="cards">
-            {cards.map(({ title, link }, i) => 
-              <div className="cards__item" key={i}>
-              {link && <Link to={link}>
-                {title}
-              </Link>}
-
-              {!link && <>{title}</>}
-              </div>
-            )}
-          </div>}
-        </div>
-      </section>
-    )
-  }
-}
-
-Cards.propTypes = {
-  cards: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      link: PropTypes.string,
-    })
+  return (
+    <>
+      <ScrollCards {...data.allMarkdownRemark} hasIndicator={true} />
+    </>
   )
-}
-
-Cards.defaultProps = {
-  cards: []
 }
 
 export default Cards

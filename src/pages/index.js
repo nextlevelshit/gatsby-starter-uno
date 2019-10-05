@@ -16,12 +16,6 @@ const IndexPage = ({ isImprintCollapsed, isModalOpen, children }) => {
           displayTitle,
           displaySubtitle
         }
-      },
-      dataJson {
-        cards {
-          title,
-          link
-        }
       }
     }
   `)
@@ -30,8 +24,7 @@ const IndexPage = ({ isImprintCollapsed, isModalOpen, children }) => {
     <Layout isImprintCollapsed={isImprintCollapsed}>
       <SEO title="Home" />
       <Display {...data.site.siteMetadata} />
-      <Cards {...data.dataJson} />
-      
+      <Cards />
       {isModalOpen && children && 
         <Modal>
           {children}

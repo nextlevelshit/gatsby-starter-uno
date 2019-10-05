@@ -1,8 +1,19 @@
-const { colors, opacity, fontFamily, letterSpacing } = require('tailwindcss/defaultTheme')
+const { 
+  colors, 
+  opacity, 
+  fontFamily, 
+  letterSpacing,
+  boxShadow,
+} = require('tailwindcss/defaultTheme')
 
 module.exports = {
   theme: {
     extend: {
+      boxShadow: {
+        'top-lg': '0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 -4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'top-xl': '0 -20px 25px -5px rgba(0, 0, 0, 0.1), 0 -10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'top-2xl': '0 -25px 50px -12px rgba(0, 0, 0, 0.25)',
+      }
     },
     colors: {
       gray: colors.gray,

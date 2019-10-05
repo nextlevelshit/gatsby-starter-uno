@@ -80,11 +80,12 @@ module.exports = {
               rel: `nofollow noopener noreferrer`,
             },
           },
-          `gatsby-remark-autolink-headers`,
+          // `gatsby-remark-autolink-headers`,
         ],
       },
     },
     `gatsby-plugin-react-image-map`,
+    `gatsby-plugin-react-scroll-cards`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
