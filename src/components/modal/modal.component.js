@@ -1,6 +1,6 @@
+import { navigate } from "gatsby"
 import React from "react"
 import ReactModal from "react-modal"
-import { navigate } from "gatsby"
 
 import "./modal.component.scss"
 
