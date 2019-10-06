@@ -18,7 +18,7 @@
       @apply block;
 
       color:  var(--color-primary-light);      
-      transition: all var(--transition-duration) var(--transition-timing-function);
+      transition: all var(--transition-duration) var(--transition-delay) var(--transition-timing-function);
 
       &:after {
         background: var(--color-primary-light);
@@ -38,8 +38,13 @@
       }
     }
 
+    &__subtitle {
+      transition: all var(--transition-duration) var(--transition-delay) var(--transition-timing-function);
+    }
+
     .container {
       border-color: var(--color-primary-lighter);
+      transform: translateX(calc(-1 * theme('spacing.5')));
     }
   }
 }

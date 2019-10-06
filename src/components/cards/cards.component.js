@@ -13,8 +13,12 @@ const Cards = () =>  {
             title
             modal
           }
+          headings {
+            value
+            depth
+          }
           html
-        } 
+        }
       }
     }
   `)
