@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import ScrollCards from "./../../../plugins/gatsby-plugin-react-scroll-cards"
+import ScrollCards from "gatsby-plugin-react-scroll-cards"
 
 import "./cards.component.scss"
 
