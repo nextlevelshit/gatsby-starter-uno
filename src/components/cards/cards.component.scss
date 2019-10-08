@@ -6,9 +6,11 @@
     &__content {
       @apply py-20 relative;
     }
-
-    &__title {
-
+    
+    a {
+      &:after {
+        transition: transform var(--transition-duration) var(--transition-timing-function);
+      }
     }
   }
 
@@ -17,8 +19,8 @@
     &__title {
       @apply block;
 
-      color:  var(--color-primary-light);      
-      transition: all var(--transition-duration) var(--transition-delay) var(--transition-timing-function);
+      color: var(--color-primary-light);      
+      transition: flex-shrink var(--transition-duration) var(--transition-timing-function);
 
       &:after {
         background: var(--color-primary-light);
@@ -26,7 +28,7 @@
       }
 
       &--active {
-        color:  var(--color-primary);
+        color: var(--color-primary);
 
         &:after {
           background: var(--color-primary);
@@ -39,7 +41,19 @@
     }
 
     &__subtitle {
-      transition: all var(--transition-duration) var(--transition-delay) var(--transition-timing-function);
+      $this-extra-delay-factor: 600ms;
+
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+      transition-property: margin, opacity;
+
+      @for $i from 1 through 20 {
+        &:nth-child(0n + #{$i}) {
+          $this-extra-delay: (1 - 1 / $i) * $this-extra-delay-factor;
+
+          transition-duration: calc(var(--transition-duration) + #{$this-extra-delay});
+        }
+      }
     }
 
     .container {

@@ -33,46 +33,10 @@ h2 {
   @screen lg {
     @apply w-3/4;
   }
-
-  // > span {
-  //   @apply relative;
-
-  //   &:before {
-  //     @apply absolute;
-  
-  //     content: '';
-  //     height: 33%;
-  //     left: -0.5rem;
-  //     right: -0.5rem;
-  //     bottom: 10%;
-  //     background-color: var(--color-primary-lighter);
-  //     z-index: -1;
-  //   }
-  // }
 }
 
 h3 {
   @apply text-lg;
-
-  // > span {
-  //   @apply relative;
-
-  //   &:before {
-  //     @apply absolute;
-  
-  //     content: '';
-  //     height: 33%;
-  //     left: -0.2rem;
-  //     right: -0.2rem;
-  //     bottom: 10%;
-  //     background-color: var(--color-secondary)-lighter;
-  //     z-index: -1;
-  //   }
-  // }
-
-  // small {
-  //   @apply block mt-3 text-sm text-gray-800 uppercase;
-  // }
 }
 
 h4 {
@@ -93,13 +57,13 @@ a {
   @apply no-underline cursor-pointer;
 
   text-decoration-color: var(--color-primary-lighter);
-  transition: all 160ms;
+  transition: all var(--transition-duration);
 
   &:hover,
   &:focus {
     @apply no-underline;
 
-    color: var(--color-primary-darker);
+    color: var(--color-primary);
   }
 
   &:active {

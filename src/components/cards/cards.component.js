@@ -17,6 +17,9 @@ const Cards = () =>  {
             value
             depth
           }
+          fields {
+            slug
+          }
           html
         }
       }

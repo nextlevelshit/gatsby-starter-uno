@@ -34,7 +34,7 @@
     }
 
     h1 {
-      @apply text-2xl font-hairline mt-8;
+      @apply text-2xl font-hairline mt-0;
     }
   
     h2 {
@@ -44,7 +44,7 @@
     p {
       @apply leading-relaxed opacity-90;
   
-      @screen lg {
+      @screen xl {
         @apply w-2/3;
       }
     }
