@@ -9,7 +9,7 @@
 .modal {
 
   &__inner {
-    @apply fixed inset-y-0 bg-black text-white overflow-y-auto z-20;
+    @apply fixed inset-y-0 bg-primary-900 text-white overflow-y-auto z-20;
 
     left: 100vw;
     right: -100vw;
