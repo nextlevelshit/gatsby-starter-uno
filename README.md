@@ -25,7 +25,7 @@ This starter ships with the main Gatsby configuration files, Tailwind CSS and ro
     Use the Gatsby CLI to create a new site, specifying the uno starter.
 
     ```shell
-     # create a new Gatsby site using the default starter
+    # create a new Gatsby site using the default starter
     gatsby new gatsby-starter-uno https://github.com/nextlevelshit/gatsby-starter-uno
     ```
 
@@ -35,7 +35,7 @@ This starter ships with the main Gatsby configuration files, Tailwind CSS and ro
 
     ```shell
     cd gatsby-starter-uno/
-     gatsby develop
+    gatsby develop
     ```
 
 1.  **Open the source code and start editing!**
@@ -45,6 +45,10 @@ This starter ships with the main Gatsby configuration files, Tailwind CSS and ro
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
     Open the `gatsby-starter-uno` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+## Usage
+
+
 
 ## What's inside?
 
