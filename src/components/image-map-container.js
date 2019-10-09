@@ -9,7 +9,7 @@ const ImageMapContainer = () => {
       allFile(filter: {sourceInstanceName: {eq: "image-map"}}) {
         nodes {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1280) {
               ...GatsbyImageSharpFluid_noBase64
             }
           }

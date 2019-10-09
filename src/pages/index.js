@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Display from "../components/display/display.component"
 import Modal from "../components/modal/modal.component"
 import Cards from "../components/cards/cards.component"
+import Parallax from "../components/parallax/parallax.component";
 
 const IndexPage = ({ isImprintCollapsed, isModalOpen, children }) => {
   const data = useStaticQuery(graphql`
@@ -24,6 +25,7 @@ const IndexPage = ({ isImprintCollapsed, isModalOpen, children }) => {
     <Layout isImprintCollapsed={isImprintCollapsed}>
       <SEO title="Home" />
       <Display {...data.site.siteMetadata} />
+      <Parallax />
       <Cards />
       {isModalOpen && children && 
         <Modal>

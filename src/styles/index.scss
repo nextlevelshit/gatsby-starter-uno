@@ -4,9 +4,7 @@
 
 @import 'variables';
 @import 'base';
-@import 'grid';
 @import 'list';
-@import 'picture';
 
 section {
   @apply flex flex-col py-24 mt-0 bg-white;
