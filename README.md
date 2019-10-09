@@ -3,15 +3,17 @@
   <sup>GatsbyJS · Tailwind CSS · SASS/SCSS</sup>
 </div>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<br><br>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Kick off your project with this text centered boilerplate.
+This starter ships with the main Gatsby configuration files, Tailwind CSS and routable modals.
+
 
 ## Quick start
 
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+    Use the Gatsby CLI to create a new site, specifying the uno starter.
 
     ```shell
     # create a new Gatsby site using the default starter
@@ -40,44 +42,58 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
+    ├── docs
     ├── node_modules
-    ├── src
+    ├── pages
+    └── src
+        ├── components
+        ├── images
+        ├── pages
+        ├── styles
+        └── templates
     ├── .gitignore
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
     ├── LICENSE
-    ├── package-lock.json
     ├── package.json
-    └── README.md
+    ├── README.md
+    ├── tailwind.config.js
+    └── yarn.lock
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1.  **`/docs`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+2.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+3.  **`/pages`**: This directory contains all markdown files which all get a static path to navigate to. For now they are used for the content of routable modals.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+4.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for „source code”.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+    4.1. **`/src/components`**: This directory contains reuasable components that can be implemented on purpose. They mostly run as stand-alone and do not have any dependencies to other modules, components or pages. Some are organized in directories, if your include some styling.
+    
+    4.2. **`/src/images`**: This direcotry contains (for now) all the images used for the `image-map` plugin that creates an interactive first impression of your website.
+    
+    4.3. **`/src/styles`**: This directory contains the main part of your styles, defines CSS variables and imports the tailwind functionality. All global stylings that are not directly connected to a specific component (see above) come here.
+    
+    4.4. **`/src/templates`**: This directory contains templates which are used to generate routable pages inside of `gatsby-node.js`.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+5.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+6.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+7.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+8.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+9.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+9.  **`LICENSE`**: Uno starter is licensed under Apache 2.0.
 
-## Learning Gatsby
+10. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+11. **`README.md`**: A text file containing useful reference information about your project.
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+12. **`tailwind.config.js`**: A configuration file for changing the default styling parameters for Tailwind CSS. General styling adaptions should be done inside this file instead of overwriting everything in the SCSS files or component styles.
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+13. **`yarn.lock`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
