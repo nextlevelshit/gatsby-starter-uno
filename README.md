@@ -20,7 +20,7 @@ This starter ships with the main Gatsby configuration files, Tailwind CSS and ro
     Use the Gatsby CLI to create a new site, specifying the uno starter.
 
     ```shell
-    # create a new Gatsby site using the default starter
+     # create a new Gatsby site using the default starter
     gatsby new gatsby-starter-uno https://github.com/nextlevelshit/gatsby-starter-uno
     ```
 
@@ -30,7 +30,7 @@ This starter ships with the main Gatsby configuration files, Tailwind CSS and ro
 
     ```shell
     cd gatsby-starter-uno/
-    gatsby develop
+     gatsby develop
     ```
 
 1.  **Open the source code and start editing!**
@@ -72,15 +72,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 3.  **`/pages`**: This directory contains all markdown files which all get a static path to navigate to. For now they are used for the content of routable modals.
 
-4.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for „source code”.
+4.  **`/src`**: This directory will contain all the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for „source code”.
 
-    4.1. **`/src/components`**: This directory contains reuasable components that can be implemented on purpose. They mostly run as stand-alone and do not have any dependencies to other modules, components or pages. Some are organized in directories, if your include some styling.
-    
+    4.1. **`/src/components`**: This directory contains reuasable components that you can implement on purpose. They run as stand-alone and do not have any dependencies to other modules, components or pages. Some are organized in directories, if your include some styling.
+ 
     4.2. **`/src/images`**: This direcotry contains (for now) all the images used for the `image-map` plugin that creates an interactive first impression of your website.
-    
-    4.3. **`/src/styles`**: This directory contains the main part of your styles, defines CSS variables and imports the tailwind functionality. All global stylings that are not directly connected to a specific component (see above) come here.
-    
-    4.4. **`/src/templates`**: This directory contains templates which are used to generate routable pages inside of `gatsby-node.js`.
+ 
+    4.3. **`/src/styles`**: This directory contains the main part of your styles, defines CSS variables and imports the tailwind functionality. All global stylings that are not connected to a specific component (see above) come here.
+ 
+    4.4. **`/src/templates`**: This directory contains templates which are helpful to generate routable pages inside of `gatsby-node.js`.
 
 5.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
@@ -101,3 +101,4 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 12. **`tailwind.config.js`**: A configuration file for changing the default styling parameters for Tailwind CSS. General styling adaptions should be done inside this file instead of overwriting everything in the SCSS files or component styles.
 
 13. **`yarn.lock`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+
