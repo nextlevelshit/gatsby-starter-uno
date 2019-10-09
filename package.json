@@ -2,7 +2,7 @@
   "name": "gatsby-starter-uno",
   "private": false,
   "description": "Minimal Gatsby Starter Template for a Landingpage with TailwindCSS",
-  "version": "1.0.0-0",
+  "version": "1.0.0-1",
   "author": "Michael Czechowski <mail@dailysh.it>",
   "dependencies": {
     "autoprefixer": "^9.6.1",
