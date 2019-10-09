@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import ImageMap from "./../../plugins/gatsby-plugin-react-image-map"
+import ImageMap from "plugins/gatsby-plugin-react-image-map"
 
 const ImageMapContainer = () => {
   const data = useStaticQuery(graphql`
