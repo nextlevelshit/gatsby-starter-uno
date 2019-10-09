@@ -5,6 +5,10 @@
 
 <br><br>
 
+![Screenshots of Uno Starter Landingpage](./src/images/screenshots.png)
+
+<br><br>
+
 Kick off your project with this text centered boilerplate.
 This starter ships with the main Gatsby configuration files, Tailwind CSS and routable modals.
 
