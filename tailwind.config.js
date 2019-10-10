@@ -23,7 +23,7 @@ module.exports = {
       white: colors.white,
     },
     fontSize: {
-      sm: '.675rem',
+      sm: '.85rem',
       base: '1rem',
       lg: '1.125rem',
       xl: '1.5rem',

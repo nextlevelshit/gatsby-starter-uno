@@ -1,0 +1,49 @@
+/**
+ * BEM class name formatting is not used in here, because of the
+ * react parallax module used. It has not changable class names,
+ * so it is better to stick to its class name styling.
+ */
+
+.parallax {
+  @apply overflow-hidden;
+
+  &-row {
+    @apply flex flex-col items-center mb-40;
+
+    @screen lg {
+      @apply flex-row mb-6;
+    }
+
+    &-text {
+      @apply text-sm leading-tight pt-12 pb-20;
+
+      @screen lg {
+        @apply py-0 pl-12 w-2/3;
+      }
+    }
+
+    &-image {
+      @apply shadow-lg w-1/2;
+
+      @screen lg {
+        @apply w-1/3;
+      }
+    }
+  }
+
+  &-outer {
+    @apply relative;
+
+    @screen lg {
+      @apply;
+    }
+  }
+
+  h2 {
+    @apply w-full mt-0;
+  }
+
+  .container {
+    @apply flex flex-col;
+  }
+}

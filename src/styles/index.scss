@@ -6,12 +6,6 @@
 @import 'base';
 @import 'list';
 
-section {
-  @apply flex flex-col py-24 mt-0 bg-white;
-
-  min-height: var(--app-height);
-}
-
 .container {
   @apply mx-auto px-10;
 }

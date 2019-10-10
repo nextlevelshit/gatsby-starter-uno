@@ -88,3 +88,9 @@ blockquote {
     @apply text-sm;
   }
 } 
+
+section {
+  @apply flex flex-col py-24 mt-0 bg-white;
+
+  min-height: var(--app-height);
+}
